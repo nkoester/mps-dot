@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/devkits/de.citec.dot.devkit/de.citec.dot.devkit.devkit" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.citec.dot.plaintextgen/de.citec.dot.plaintextgen.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.citec.dot/de.citec.dot.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.citec.dot.build/de.citec.dot.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.citec.dot.sandbox/de.citec.dot.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
