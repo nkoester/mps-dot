@@ -5,10 +5,10 @@
   <property name="build.layout" location="${build.dir}/artifacts/de.citec.dot" />
   <property name="mps_home" location="" />
   <property name="current_version" value="2018.2" />
-  <property name="plaintextgen_home" location="${basedir}/../mps-plaintextgen/build/artifacts/com.dslfoundry.plaintextgen" />
+  <property name="path__plaintextgen" location="" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.mpsCore" location="${mps_home}" />
-  <property name="artifacts.com.dslfoundry.plaintextgen" location="${plaintextgen_home}" />
+  <property name="artifacts.com.dslfoundry.plaintextgen" location="${path__plaintextgen}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
   <property name="mps.date" value="${import.mps.mps.date}" />
@@ -370,7 +370,7 @@
         <arg value="-Xmx512m" />
       </jvmargs>
       <macro name="mps_home" path="${mps_home}" />
-      <macro name="plaintextgen_home" path="${plaintextgen_home}" />
+      <macro name="path__plaintextgen" path="${path__plaintextgen}" />
     </generate>
   </target>
   

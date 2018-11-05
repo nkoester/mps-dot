@@ -55,9 +55,7 @@
       <concept id="7389400916848050060" name="jetbrains.mps.build.structure.BuildLayout_NamedContainer" flags="ng" index="3981dR">
         <child id="4380385936562148502" name="containerName" index="Nbhlr" />
       </concept>
-      <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT">
-        <child id="7389400916848144618" name="defaultPath" index="398pKh" />
-      </concept>
+      <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT" />
       <concept id="7389400916848153117" name="jetbrains.mps.build.structure.BuildSourceMacroRelativePath" flags="ng" index="398BVA">
         <reference id="7389400916848153130" name="macro" index="398BVh" />
       </concept>
@@ -156,25 +154,8 @@
         </node>
       </node>
     </node>
-    <node concept="398rNT" id="7$T_6mLQSdn" role="1l3spd">
-      <property role="TrG5h" value="plaintextgen_home" />
-      <node concept="55IIr" id="7$T_6mLQSf6" role="398pKh">
-        <node concept="2Ry0Ak" id="7$T_6mLQSfO" role="iGT6I">
-          <property role="2Ry0Am" value=".." />
-          <node concept="2Ry0Ak" id="7$T_6mLQSgg" role="2Ry0An">
-            <property role="2Ry0Am" value="mps-plaintextgen" />
-            <node concept="2Ry0Ak" id="7$T_6mLQSh1" role="2Ry0An">
-              <property role="2Ry0Am" value="build" />
-              <node concept="2Ry0Ak" id="7$T_6mLQShM" role="2Ry0An">
-                <property role="2Ry0Am" value="artifacts" />
-                <node concept="2Ry0Ak" id="7$T_6mLQSiz" role="2Ry0An">
-                  <property role="2Ry0Am" value="com.dslfoundry.plaintextgen" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
+    <node concept="398rNT" id="6kz3fYZ2H6k" role="1l3spd">
+      <property role="TrG5h" value="path__plaintextgen" />
     </node>
     <node concept="2sgV4H" id="74BOdhSGtEv" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
@@ -191,7 +172,7 @@
     <node concept="2sgV4H" id="7$T_6mLQSc5" role="1l3spa">
       <ref role="1l3spb" to="g0to:2NTGYE$JTGH" resolve="com.dslfoundry.plaintextgen" />
       <node concept="398BVA" id="7$T_6mLQSjk" role="2JcizS">
-        <ref role="398BVh" node="7$T_6mLQSdn" resolve="plaintextgen_home" />
+        <ref role="398BVh" node="6kz3fYZ2H6k" resolve="path__plaintextgen" />
       </node>
     </node>
     <node concept="1l3spV" id="74BOdhSGtEL" role="1l3spN">
