@@ -37,7 +37,7 @@
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.citec.dot</id>
         <name>de.citec.dot</name>
-        <version>1.0</version>
+        <version>${current_version}</version>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.build</depends>
         <depends>com.dslfoundry.plaintextgen</depends>
