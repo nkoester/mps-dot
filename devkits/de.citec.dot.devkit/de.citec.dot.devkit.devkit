@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dev-kit name="de.citec.dot.devkit" uuid="c5093ec9-39ec-4fce-8f7a-67baf9750637">
-  <exported-language name="c1319453-46ac-4ca7-913b-91def4805e4e(de.citec.dot)" />
-  <exported-language name="de08ce63-db43-4eb1-bab6-26bd8eae3b16(de.citec.dot.plaintextgen)" />
-</dev-kit>
-

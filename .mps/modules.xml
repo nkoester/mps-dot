@@ -2,11 +2,12 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/devkits/de.citec.dot.devkit/de.citec.dot.devkit.devkit" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/de.citec.dot.plaintextgen/de.citec.dot.plaintextgen.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/de.citec.dot/de.citec.dot.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/de.citec.dot.build/de.citec.dot.build.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/de.citec.dot.sandbox/de.citec.dot.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/devkits/libre.doge.mps.dot.devkit/libre.doge.mps.dot.devkit.devkit" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/libre.doge.mps.dot.plaintextgen/libre.doge.mps.dot.plaintextgen.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/libre.doge.mps.dot/libre.doge.mps.dot.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.build/libre.doge.mps.dot.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.genplan/libre.doge.mps.dot.genplan.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.sandbox/libre.doge.mps.dot.sandbox.msd" folder="" />
     </projectModules>
   </component>
 </project>

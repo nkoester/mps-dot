@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev-kit name="libre.doge.mps.dot.devkit" uuid="c5093ec9-39ec-4fce-8f7a-67baf9750637">
+  <exported-language name="c1319453-46ac-4ca7-913b-91def4805e4e(libre.doge.mps.dot)" />
+  <exported-language name="de08ce63-db43-4eb1-bab6-26bd8eae3b16(libre.doge.mps.dot.plaintextgen)" />
+  <exported-solutions>
+    <exported-solution>88b29dc3-c215-4247-960a-12e2b6b00045(libre.doge.mps.dot.genplan)</exported-solution>
+  </exported-solutions>
+  <generation-plan model="r:2e6a4bd5-7910-4ce6-ad02-5afcceb70989(de.doge.mps.dot.genplan.generate@plan)" />
+</dev-kit>
+
