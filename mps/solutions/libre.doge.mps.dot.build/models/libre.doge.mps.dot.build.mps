@@ -202,7 +202,7 @@
       <node concept="3981dG" id="74BOdhSGtEM" role="39821P">
         <node concept="3_J27D" id="74BOdhSGtEN" role="Nbhlr">
           <node concept="3Mxwew" id="74BOdhSGtEO" role="3MwsjC">
-            <property role="3MwjfP" value="de.doge.mps.dot-" />
+            <property role="3MwjfP" value="libre.doge.mps.dot-" />
           </node>
           <node concept="3Mxwey" id="74BOdhSGz0l" role="3MwsjC">
             <ref role="3Mxwex" to="ffeo:5HVSRHdVf2d" resolve="version" />
