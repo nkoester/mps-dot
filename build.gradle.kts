@@ -41,10 +41,13 @@ downloadJbr {
     downloadDir = jbrDir
 }
 
+println("####################################")
 println("Versions:")
 println("\tmpsDependencies: " + mps.resolve())
 println("\tProject directory: " + projectDir)
 println("\tBuild directory: " + buildDir)
+println("\tJBR directory: " + jbrDir)
+println("####################################")
 
 val extractMps by tasks.registering(Copy::class) {
     from({ mps.resolve().map { zipTree(it) } })
