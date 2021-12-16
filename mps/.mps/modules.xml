@@ -3,11 +3,12 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/devkits/libre.doge.mps.dot.devkit/libre.doge.mps.dot.devkit.devkit" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/libre.doge.mps.dot.plaintextgen/libre.doge.mps.dot.plaintextgen.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/libre.doge.mps.dot/libre.doge.mps.dot.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.build/libre.doge.mps.dot.build.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.genplan/libre.doge.mps.dot.genplan.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.sandbox/libre.doge.mps.dot.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/libre.doge.mps.dot.plaintextgen/libre.doge.mps.dot.plaintextgen.mpl" folder="70_generate" />
+      <modulePath path="$PROJECT_DIR$/languages/libre.doge.mps.dot/libre.doge.mps.dot.mpl" folder="50_core" />
+      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.dot.build.entry/libre.doge.dot.build.entry.msd" folder="00_build" />
+      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.build/libre.doge.mps.dot.build.msd" folder="00_build" />
+      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.genplan/libre.doge.mps.dot.genplan.msd" folder="70_generate" />
+      <modulePath path="$PROJECT_DIR$/solutions/libre.doge.mps.dot.sandbox/libre.doge.mps.dot.sandbox.msd" folder="90_sandbox" />
     </projectModules>
   </component>
 </project>

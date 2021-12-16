@@ -1,5 +1,9 @@
 import de.itemis.mps.gradle.downloadJBR.DownloadJbrForPlatform
 import de.itemis.mps.gradle.BuildLanguages
+import de.itemis.mps.gradle.GitBasedVersioning
+
+import kotlin.reflect.KProperty1
+import kotlin.reflect.full.memberProperties
 
 buildscript {
     repositories {
@@ -21,34 +25,58 @@ repositories {
     mavenCentral()
 }
 
+// configurations
 val mpsDependencies: Configuration by configurations.creating
 val mps: Configuration by configurations.creating
 val buildDependencies: Configuration by configurations.creating
 
 dependencies {
-    mpsDependencies("de.itemis.mps:extensions:2020.3.+")
-    mps("com.jetbrains:mps:2020.3.5")
-    buildDependencies("org.apache.ant:ant-junit:1.10.6")
+    mpsDependencies("de.itemis.mps:extensions:" + Versions.extensions)
+    mps("com.jetbrains:mps:" + Versions.mpsFull)
+    buildDependencies("org.apache.ant:ant-junit:" + Versions.antjunit)
 }
 
+// misc
 val codeDir = file("mps")
 val mpsDir = file("$buildDir/mps")
 val dependencyDir = file("$codeDir/dependencies")
 val jbrDir = file("$buildDir/jbr")
+val gitBranch: String = GitBasedVersioning.getGitBranch()
 
 downloadJbr {
-    jbrVersion = "11_0_10-b1145.96"
-    downloadDir = jbrDir
+    jbrVersion = Versions.jbr
 }
 
-println("####################################")
-println("Versions:")
-println("\tmpsDependencies: " + mps.resolve())
-println("\tProject directory: " + projectDir)
-println("\tBuild directory: " + buildDir)
-println("\tJBR directory: " + jbrDir)
-println("####################################")
+// dependency versions
+object Versions {
+    // java
+    public const val jbr: String = "11_0_10-b1145.96"
+    public const val jbrsdk: String = "11_0_10-b1145.96"
+    //TODO: how to use this in plugins block?
+    public const val downloadJBR: String = "1.5.269.964f94a"
 
+    // mps
+    public const val mpsMajor: String = "2020"
+    public const val mpsMinor: String = "3"
+    public const val mpsPatch: String = "5"
+    public const val mpsMajorMinor: String = Versions.mpsMajor + "." + Versions.mpsMinor
+    public const val mpsFull: String = Versions.mpsMajorMinor + "." + Versions.mpsPatch
+
+    // mps dependencies
+    public const val extensions: String = "2020.3.2132.3630910"
+    public const val antjunit: String = "1.10.6"
+
+    override fun toString() : String{
+        return "\n"+ this::class.java.declaredFields.filter{ it.name != "INSTANCE" }.map { " - ${it.name} = \"${it.get(Versions)}\"" }.joinToString("\n")
+    }
+
+}
+
+
+
+
+
+// tasks
 val extractMps by tasks.registering(Copy::class) {
     from({ mps.resolve().map { zipTree(it) } })
     into(mpsDir)
@@ -61,6 +89,25 @@ val extractMpsDependencies by tasks.registering(Copy::class) {
 
 fun antVar(name: String, value: String)  = "-D$name=$value"
 
+val printVersions by tasks.registering {
+    doFirst {
+        // print sanity feedback
+        logger.lifecycle("\n--------------------\nBuild Info:\n--------------------")
+        logger.lifecycle("Java path {}", project.ext["itemis.mps.gradle.ant.defaultJavaExecutable"])
+        logger.lifecycle("gitBranch: {}", gitBranch)
+        logger.lifecycle("Project directory: {}", projectDir)
+        logger.lifecycle("JBR directory: {}", jbrDir)
+        logger.lifecycle("Java version: {}", JavaVersion.current())
+        logger.lifecycle("gradle version: {}", project.gradle.gradleVersion)
+
+        // println("CI build: "+ ext["ciBuild"])
+        logger.lifecycle("Build directory: {}", buildDir)
+        logger.lifecycle("MPS directory: {}", mpsDir)
+
+        logger.lifecycle("Dependency verisons: {}", Versions.toString())
+    }
+}
+
 val setup by tasks.registering {
     group = "Setup"
     description = "Download and extract MPS and the projects MPS dependencies."
@@ -68,6 +115,7 @@ val setup by tasks.registering {
     dependsOn(extractMpsDependencies)
     val downloadJbrForPlatform = tasks.getByName("downloadJbr", DownloadJbrForPlatform::class)
     dependsOn(downloadJbrForPlatform)
+    dependsOn(printVersions)
     ext["itemis.mps.gradle.ant.defaultJavaExecutable"] = downloadJbrForPlatform.javaExecutable
     ext["itemis.mps.gradle.ant.defaultScriptArgs"] =
         listOf(
