@@ -134,6 +134,6 @@ val buildScripts by tasks.registering(BuildLanguages::class) {
 val buildLanguages by tasks.registering(BuildLanguages::class) {
     group = "build"
     description = "Build all languages in the MPS project"
-    script = "$buildDir/../build.xml"
+    script = "$buildDir/build.xml"
     dependsOn(buildScripts)
 }
