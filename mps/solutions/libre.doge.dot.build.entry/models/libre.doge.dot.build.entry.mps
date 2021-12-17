@@ -8,7 +8,6 @@
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
     <import index="90a9" ref="r:fb24ac52-5985-4947-bba9-25be6fd32c1a(de.itemis.mps.extensions.build)" />
-    <import index="al5i" ref="r:742f344d-4dc4-4862-992c-4bc94b094870(com.mbeddr.mpsutil.dev.build)" />
   </imports>
   <registry>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
@@ -156,18 +155,6 @@
         <node concept="2Ry0Ak" id="2$bMr2pEW9$" role="iGT6I">
           <property role="2Ry0Am" value="de.itemis.mps.extensions" />
           <node concept="2Ry0Ak" id="2$bMr2pEW9B" role="2Ry0An">
-            <property role="2Ry0Am" value="" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2sgV4H" id="1Y5vs7yK2HP" role="1l3spa">
-      <ref role="1l3spb" to="al5i:3AVJcIMlF8l" resolve="com.mbeddr.platform" />
-      <node concept="398BVA" id="2$bMr2pF3Gm" role="2JcizS">
-        <ref role="398BVh" node="2$bMr2pEW8X" resolve="root.dependencies" />
-        <node concept="2Ry0Ak" id="2$bMr2pF3Gn" role="iGT6I">
-          <property role="2Ry0Am" value="de.itemis.mps.extensions" />
-          <node concept="2Ry0Ak" id="2$bMr2pF3Go" role="2Ry0An">
             <property role="2Ry0Am" value="" />
           </node>
         </node>
