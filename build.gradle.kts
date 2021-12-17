@@ -138,3 +138,6 @@ val buildLanguages by tasks.registering(BuildLanguages::class) {
     script = "$buildDir/build.xml"
     dependsOn(buildScripts)
 }
+
+defaultTasks("buildLanguages")
+
