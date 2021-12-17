@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "libre.doge.dot"
+rootProject.name = "libre.doge.mps.dot"
