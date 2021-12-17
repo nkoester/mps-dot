@@ -36,7 +36,6 @@
         <child id="6491077959632451996" name="oldEnum" index="3lCyv" />
       </concept>
       <concept id="1083171877298" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration_Old" flags="ig" index="M4N5e">
-        <property id="1192116978809" name="javaIdentifier" index="2fHolG" />
         <property id="1083923523172" name="externalValue" index="1uS6qo" />
         <property id="1083923523171" name="internalValue" index="1uS6qv" />
       </concept>
@@ -135,6 +134,11 @@
     <property role="TrG5h" value="Node" />
     <property role="3GE5qa" value="statements" />
     <ref role="1TJDcQ" node="74BOdhSIYU$" resolve="AbstractStatement" />
+    <node concept="1TJgyi" id="2qgaZgvP5Rl" role="1TKVEl">
+      <property role="IQ2nx" value="2778769297593621973" />
+      <property role="TrG5h" value="isInvisible" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="74BOdhSGMKO" role="1TKVEi">
       <property role="IQ2ns" value="8153715261354224692" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -142,18 +146,14 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="74BOdhSG_Yg" resolve="NodeID" />
     </node>
-    <node concept="1TJgyj" id="74BOdhSGMKY" role="1TKVEi">
-      <property role="IQ2ns" value="8153715261354224702" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attributeList" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="74BOdhSG_WG" resolve="AttributeList" />
-    </node>
     <node concept="PrWs8" id="74BOdhSGDiT" role="PzmwI">
       <ref role="PrY4T" node="74BOdhSGDig" resolve="IStatement" />
     </node>
     <node concept="PrWs8" id="6kz3fYY1nzj" role="PzmwI">
       <ref role="PrY4T" node="6kz3fYY1nlj" resolve="IIDElement" />
+    </node>
+    <node concept="PrWs8" id="2qgaZgvP5R6" role="PzmwI">
+      <ref role="PrY4T" node="2qgaZgvP5QZ" resolve="IAttributable" />
     </node>
   </node>
   <node concept="1TIwiD" id="74BOdhSG_VR">
@@ -175,27 +175,16 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="74BOdhSIRM0" resolve="IEdgeElement" />
     </node>
-    <node concept="1TJgyj" id="74BOdhSPNvG" role="1TKVEi">
-      <property role="IQ2ns" value="8153715261356586988" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attributeList" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="74BOdhSG_WG" resolve="AttributeList" />
-    </node>
     <node concept="1TJgyi" id="58ZMa6mNoLD" role="1TKVEl">
       <property role="TrG5h" value="operator" />
       <property role="IQ2nx" value="8153715261355675433" />
       <ref role="AX2Wp" node="58ZMa6mN646" resolve="EdgeOperators" />
-      <node concept="3l_iC" id="58ZMa6mNoLE" role="lGtFl">
-        <node concept="1TJgyi" id="74BOdhSMkWD" role="3l_iP">
-          <property role="IQ2nx" value="8153715261355675433" />
-          <property role="TrG5h" value="operator" />
-          <ref role="AX2Wp" node="74BOdhSMkW6" resolve="EdgeOperators" />
-        </node>
-      </node>
     </node>
     <node concept="PrWs8" id="74BOdhSGDiJ" role="PzmwI">
       <ref role="PrY4T" node="74BOdhSGDig" resolve="IStatement" />
+    </node>
+    <node concept="PrWs8" id="2qgaZgvP5Rf" role="PzmwI">
+      <ref role="PrY4T" node="2qgaZgvP5QZ" resolve="IAttributable" />
     </node>
   </node>
   <node concept="1TIwiD" id="74BOdhSG_W2">
@@ -480,13 +469,6 @@
       <property role="TrG5h" value="operator" />
       <property role="IQ2nx" value="8153715261355788818" />
       <ref role="AX2Wp" node="58ZMa6mN646" resolve="EdgeOperators" />
-      <node concept="3l_iC" id="58ZMa6mNoLK" role="lGtFl">
-        <node concept="1TJgyi" id="74BOdhSMKCi" role="3l_iP">
-          <property role="IQ2nx" value="8153715261355788818" />
-          <property role="TrG5h" value="operator" />
-          <ref role="AX2Wp" node="74BOdhSMkW6" resolve="EdgeOperators" />
-        </node>
-      </node>
     </node>
     <node concept="PrWs8" id="74BOdhSMQmU" role="PzmwI">
       <ref role="PrY4T" node="74BOdhSIRM0" resolve="IEdgeElement" />
@@ -642,38 +624,27 @@
     <property role="3GE5qa" value="statements" />
     <property role="3F6X1D" value="8153715261355675398" />
     <ref role="1H5jkz" node="58ZMa6mN648" resolve="directed" />
-    <node concept="2JgGob" id="58ZMa6mN647" role="lGtFl">
-      <property role="3scbB" value="5CkWgdpp3eZ/string_presentation" />
-      <property role="3sfsH" value="5CkWgdpp0p1/by_name" />
-      <node concept="AxPO7" id="74BOdhSMkW6" role="3lCyv">
-        <property role="TrG5h" value="EdgeOperators" />
-        <property role="3lZH7k" value="hrlZpEz/custom" />
-        <property role="3GE5qa" value="statements" />
-        <property role="3F6X1D" value="8153715261355675398" />
-        <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
-        <node concept="M4N5e" id="74BOdhSMkW7" role="M5hS2">
-          <property role="1uS6qo" value="-&gt;" />
-          <property role="2fHolG" value="directed" />
-          <property role="1uS6qv" value="-&gt;" />
-        </node>
-        <node concept="M4N5e" id="74BOdhSMkWm" role="M5hS2">
-          <property role="1uS6qo" value="--" />
-          <property role="2fHolG" value="undirected" />
-          <property role="1uS6qv" value="--" />
-        </node>
-      </node>
-    </node>
     <node concept="25R33" id="58ZMa6mN648" role="25R1y">
       <property role="TrG5h" value="directed" />
       <property role="1L1pqM" value="-&gt;" />
       <property role="3tVfz5" value="8153715261355675399" />
-      <ref role="2wpffI" node="74BOdhSMkW7" />
     </node>
     <node concept="25R33" id="58ZMa6mN649" role="25R1y">
       <property role="TrG5h" value="undirected" />
       <property role="1L1pqM" value="--" />
       <property role="3tVfz5" value="8153715261355675414" />
-      <ref role="2wpffI" node="74BOdhSMkWm" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="2qgaZgvP5QZ">
+    <property role="EcuMT" value="2778769297593621951" />
+    <property role="TrG5h" value="IAttributable" />
+    <property role="3GE5qa" value="statements" />
+    <node concept="1TJgyj" id="2qgaZgvP5R0" role="1TKVEi">
+      <property role="IQ2ns" value="2778769297593621952" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="attributeList" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="74BOdhSG_WG" resolve="AttributeList" />
     </node>
   </node>
 </model>
