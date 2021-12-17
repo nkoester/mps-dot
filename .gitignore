@@ -1,6 +1,7 @@
 workspace.xml
 
 # build files
+build.xml
 mps/dependencies/
 
 # generated java classes and java source files
