@@ -1,13 +1,21 @@
 # mps-dot
+
+## Description
+
 The Graphviz Dot language as a Jetbrains MPS language
 
-The currently supported MPS version is **2018.2.1**.
+The currently supported MPS version is **2020.3.5**.
 
-The provided text generator language requires the mps-plaintextgen plugin from
-
-    https://github.com/DSLFoundry/mps-plaintextgen/
+The implemented dot to text generator requires the `mps-plaintextgen` plugin which is part of the `mps-extensions`.
 
 
-Build this language as a plugin via
+## Build Instructions
 
-`ant -Dmps_home=PATH_TO_'MPS-2018.2.1-generic' -Dpath__plaintextgen=PATH_TO_PLAINTEXTGEN_PLUGIN  -file build.xml`
+A bould requires at least Java 11 to kick off. Build is started via
+
+```
+./gradlew build
+```
+All dependencies are obtained automatically by gradle. And the correct Java version for the build itself is also downloaded
+
+Artifacts are generated to `build/artifacts/de.doge.mps.dot`.

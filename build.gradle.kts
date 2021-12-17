@@ -121,7 +121,8 @@ val setup by tasks.registering {
         listOf(
             antVar("mps_home", mpsDir.absolutePath),
             antVar("dependencyDir", dependencyDir.absolutePath),
-            antVar("mps.generator.skipUnmodifiedModels", "true")
+            antVar("mps.generator.skipUnmodifiedModels", "true"),
+            antVar("build.dir", "./")
         )
     ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = buildDependencies.fileCollection { true }
 }
