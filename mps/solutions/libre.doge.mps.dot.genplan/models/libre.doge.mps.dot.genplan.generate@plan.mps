@@ -39,6 +39,12 @@
           <property role="20Rdg7" value="de.doge.mps.dot.plaintextgen#01" />
         </node>
       </node>
+      <node concept="3uMdn$" id="5MYAPPkvTZJ" role="3uOsAP">
+        <node concept="20RdaH" id="5MYAPPkvTZK" role="3uMdmt">
+          <property role="20Rdg5" value="1f3698ec-8a44-4aaa-b907-0ac2077d80a4" />
+          <property role="20Rdg7" value="jetbrains.mps.lang.core#9100558062448742579" />
+        </node>
+      </node>
     </node>
   </node>
 </model>

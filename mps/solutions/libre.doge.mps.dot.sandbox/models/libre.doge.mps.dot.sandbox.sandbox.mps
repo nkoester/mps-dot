@@ -17,11 +17,9 @@
       <concept id="8153715261354172151" name="libre.doge.mps.dot.structure.Edge" flags="ng" index="9_oSz">
         <child id="8153715261355742280" name="right" index="9Vois" />
         <child id="8153715261355742252" name="left" index="9VojS" />
-        <child id="8153715261356586988" name="attributeList" index="9WesS" />
       </concept>
       <concept id="8153715261354172140" name="libre.doge.mps.dot.structure.Node" flags="ng" index="9_oSS">
         <child id="8153715261354224692" name="id" index="9_fNw" />
-        <child id="8153715261354224702" name="attributeList" index="9_fNE" />
       </concept>
       <concept id="8153715261354172057" name="libre.doge.mps.dot.structure.Graph" flags="ng" index="9_oTd" />
       <concept id="8153715261354172079" name="libre.doge.mps.dot.structure.AbstractGraph" flags="ng" index="9_oTV">
@@ -97,51 +95,38 @@
             <property role="TrG5h" value="somSubGraph01" />
           </node>
         </node>
-        <node concept="9_oSS" id="74BOdhSJptc" role="9B3TB">
-          <node concept="9_oX4" id="74BOdhSJptd" role="9_fNw">
+        <node concept="9_oSS" id="46B2TQ45WMU" role="9B3TB">
+          <node concept="9_oX4" id="46B2TQ45WMW" role="9_fNw">
             <property role="TrG5h" value="node01" />
           </node>
-          <node concept="9_oZS" id="74BOdhSJIfQ" role="9_fNE">
-            <node concept="9A$y2" id="74BOdhSJIhM" role="9_oZz">
-              <property role="9A$yV" value="a" />
-              <property role="9A$yH" value="b" />
-            </node>
-          </node>
         </node>
-        <node concept="9_oSS" id="74BOdhSJptW" role="9B3TB">
-          <node concept="9_oX4" id="74BOdhSJptY" role="9_fNw">
+        <node concept="9_oSS" id="46B2TQ45WOr" role="9B3TB">
+          <node concept="9_oX4" id="46B2TQ45WOt" role="9_fNw">
             <property role="TrG5h" value="node02" />
-            <node concept="9_fM5" id="74BOdhSKfjf" role="9ATIT">
-              <node concept="9A7IR" id="74BOdhSKfjp" role="9A7H4">
+            <node concept="9_fM5" id="46B2TQ45WOY" role="9ATIT">
+              <node concept="9TPfi" id="46B2TQ45WP0" role="9TPdn" />
+              <node concept="9A7IR" id="46B2TQ45WP4" role="9A7H4">
                 <property role="TrG5h" value="port01" />
               </node>
-              <node concept="9TPfi" id="74BOdhSKfjz" role="9TPdn" />
             </node>
           </node>
-          <node concept="9_oZS" id="74BOdhSLQej" role="9_fNE" />
         </node>
-        <node concept="9_oSz" id="74BOdhSMTju" role="9B3TB">
-          <node concept="9_6mC" id="74BOdhSMWbj" role="9VojS">
-            <ref role="9_6mD" node="74BOdhSJptd" resolve="node01" />
+        <node concept="9_oSz" id="46B2TQ45WQ0" role="9B3TB">
+          <node concept="9_6mC" id="46B2TQ45WQz" role="9VojS">
+            <ref role="9_6mD" node="46B2TQ45WMW" resolve="node01" />
           </node>
-          <node concept="9VdFn" id="74BOdhSMWbu" role="9Vois">
-            <node concept="9BaM0" id="74BOdhSNf9P" role="9VdF8">
-              <node concept="9_oZ3" id="74BOdhSNf9R" role="9BaMT">
-                <node concept="9_oSS" id="74BOdhSNfab" role="9B3TB">
-                  <node concept="9_oX4" id="74BOdhSNfac" role="9_fNw">
+          <node concept="9VdFn" id="46B2TQ45WRS" role="9Vois">
+            <node concept="9BaM0" id="46B2TQ45WRT" role="9VdF8">
+              <node concept="9_oZ3" id="46B2TQ45WRU" role="9BaMT">
+                <node concept="9_oSS" id="46B2TQ45WRV" role="9B3TB">
+                  <node concept="9_oX4" id="46B2TQ45WRW" role="9_fNw">
                     <property role="TrG5h" value="subNodeAgain" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="9_6mC" id="74BOdhSNf9F" role="9UTVQ">
-              <ref role="9_6mD" node="74BOdhSJptY" resolve="node02" />
-            </node>
-          </node>
-          <node concept="9_oZS" id="74BOdhSQ0CH" role="9WesS">
-            <node concept="9A$y2" id="74BOdhSQ0Dt" role="9_oZz">
-              <property role="9A$yV" value="a" />
-              <property role="9A$yH" value="b" />
+            <node concept="9_6mC" id="46B2TQ45WRX" role="9UTVQ">
+              <ref role="9_6mD" node="46B2TQ45WOt" resolve="node02" />
             </node>
           </node>
         </node>
