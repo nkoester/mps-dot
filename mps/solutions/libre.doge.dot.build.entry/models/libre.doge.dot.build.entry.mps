@@ -7,6 +7,8 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+    <import index="90a9" ref="r:fb24ac52-5985-4947-bba9-25be6fd32c1a(de.itemis.mps.extensions.build)" />
+    <import index="al5i" ref="r:742f344d-4dc4-4862-992c-4bc94b094870(com.mbeddr.mpsutil.dev.build)" />
   </imports>
   <registry>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
@@ -88,23 +90,36 @@
     </language>
   </registry>
   <node concept="1l3spW" id="2$bMr2pDqig">
-    <property role="TrG5h" value="dot" />
-    <property role="2DA0ip" value="../../.." />
+    <property role="TrG5h" value="de.doge.mps.dot.build.entry" />
     <property role="turDy" value="buildAll.xml" />
+    <property role="2DA0ip" value="../../.." />
+    <node concept="2sgV4H" id="2qgaZgvNqSG" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
+      <node concept="398BVA" id="2qgaZgvNqSR" role="2JcizS">
+        <ref role="398BVh" node="2$bMr2pDqij" resolve="root.mps" />
+      </node>
+    </node>
     <node concept="398rNT" id="2$bMr2pDqiY" role="1l3spd">
-      <property role="TrG5h" value="project.root" />
+      <property role="TrG5h" value="root.project" />
       <node concept="55IIr" id="2$bMr2pDqj2" role="398pKh">
-        <node concept="2Ry0Ak" id="2$bMr2pDqj5" role="iGT6I">
-          <property role="2Ry0Am" value="" />
+        <node concept="2Ry0Ak" id="2$bMr2pDqj5" role="iGT6I" />
+      </node>
+    </node>
+    <node concept="398rNT" id="2$bMr2pDqjd" role="1l3spd">
+      <property role="TrG5h" value="root.build" />
+      <node concept="398BVA" id="2$bMr2pDqjk" role="398pKh">
+        <ref role="398BVh" node="2$bMr2pDqiY" resolve="root.project" />
+        <node concept="2Ry0Ak" id="2$bMr2pDqjp" role="iGT6I">
+          <property role="2Ry0Am" value="build" />
         </node>
       </node>
     </node>
     <node concept="10PD9b" id="2$bMr2pDqih" role="10PD9s" />
     <node concept="3b7kt6" id="2$bMr2pDqii" role="10PD9s" />
     <node concept="398rNT" id="2$bMr2pDqij" role="1l3spd">
-      <property role="TrG5h" value="mps.home" />
+      <property role="TrG5h" value="root.mps" />
       <node concept="398BVA" id="2$bMr2pDqkH" role="398pKh">
-        <ref role="398BVh" node="2$bMr2pDqiY" resolve="project.root" />
+        <ref role="398BVh" node="2$bMr2pDqiY" resolve="root.project" />
         <node concept="2Ry0Ak" id="2$bMr2pDqkO" role="iGT6I">
           <property role="2Ry0Am" value="build" />
           <node concept="2Ry0Ak" id="2$bMr2pDqkT" role="2Ry0An">
@@ -113,66 +128,124 @@
         </node>
       </node>
     </node>
-    <node concept="2sgV4H" id="2$bMr2pDqik" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
-      <node concept="398BVA" id="2$bMr2pDqil" role="2JcizS">
-        <ref role="398BVh" node="2$bMr2pDqij" resolve="mps.home" />
+    <node concept="398rNT" id="2$bMr2pDqnv" role="1l3spd">
+      <property role="TrG5h" value="root.module" />
+      <node concept="398BVA" id="2$bMr2pDqnK" role="398pKh">
+        <ref role="398BVh" node="2$bMr2pDqiY" resolve="root.project" />
+        <node concept="2Ry0Ak" id="2$bMr2pDqnP" role="iGT6I">
+          <property role="2Ry0Am" value="mps" />
+        </node>
+      </node>
+    </node>
+    <node concept="398rNT" id="2$bMr2pEW8X" role="1l3spd">
+      <property role="TrG5h" value="root.dependencies" />
+      <node concept="398BVA" id="2$bMr2pEW8Y" role="398pKh">
+        <ref role="398BVh" node="2$bMr2pDqiY" resolve="root.project" />
+        <node concept="2Ry0Ak" id="2$bMr2pEW8Z" role="iGT6I">
+          <property role="2Ry0Am" value="mps" />
+          <node concept="2Ry0Ak" id="2$bMr2pEW9q" role="2Ry0An">
+            <property role="2Ry0Am" value="dependencies" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2sgV4H" id="6ucYLjotvKQ" role="1l3spa">
+      <ref role="1l3spb" to="90a9:2Xjt3l56m0V" resolve="de.itemis.mps.extensions" />
+      <node concept="398BVA" id="2$bMr2pEW9v" role="2JcizS">
+        <ref role="398BVh" node="2$bMr2pEW8X" resolve="root.dependencies" />
+        <node concept="2Ry0Ak" id="2$bMr2pEW9$" role="iGT6I">
+          <property role="2Ry0Am" value="de.itemis.mps.extensions" />
+          <node concept="2Ry0Ak" id="2$bMr2pEW9B" role="2Ry0An">
+            <property role="2Ry0Am" value="" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2sgV4H" id="1Y5vs7yK2HP" role="1l3spa">
+      <ref role="1l3spb" to="al5i:3AVJcIMlF8l" resolve="com.mbeddr.platform" />
+      <node concept="398BVA" id="2$bMr2pF3Gm" role="2JcizS">
+        <ref role="398BVh" node="2$bMr2pEW8X" resolve="root.dependencies" />
+        <node concept="2Ry0Ak" id="2$bMr2pF3Gn" role="iGT6I">
+          <property role="2Ry0Am" value="de.itemis.mps.extensions" />
+          <node concept="2Ry0Ak" id="2$bMr2pF3Go" role="2Ry0An">
+            <property role="2Ry0Am" value="" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="1l3spV" id="2$bMr2pDqiE" role="1l3spN">
       <node concept="L2wRC" id="2$bMr2pDqlI" role="39821P">
-        <ref role="L2wRA" node="2$bMr2pDqlj" resolve="libre.doge.mps.dot.build" />
+        <ref role="L2wRA" node="2$bMr2pF3BY" resolve="libre.doge.mps.dot.build" />
       </node>
     </node>
     <node concept="2G$12M" id="2$bMr2pDqlh" role="3989C9">
       <property role="TrG5h" value="libre.doge.mps.dot.build" />
-      <node concept="1E1JtA" id="2$bMr2pDqlj" role="2G$12L">
+      <node concept="1E1JtA" id="2$bMr2pF3BY" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="libre.doge.mps.dot.build" />
         <property role="3LESm3" value="d7ba70f9-2674-4db6-8c37-518c70d355ae" />
         <node concept="398BVA" id="2$bMr2pDqln" role="3LF7KH">
-          <ref role="398BVh" node="2$bMr2pDqiY" resolve="project.root" />
-          <node concept="2Ry0Ak" id="2$bMr2pDqlt" role="iGT6I">
-            <property role="2Ry0Am" value="mps" />
-            <node concept="2Ry0Ak" id="2$bMr2pDqly" role="2Ry0An">
-              <property role="2Ry0Am" value="solutions" />
-              <node concept="2Ry0Ak" id="2$bMr2pDqlB" role="2Ry0An">
-                <property role="2Ry0Am" value="libre.doge.mps.dot.build" />
-                <node concept="2Ry0Ak" id="2$bMr2pDqlG" role="2Ry0An">
-                  <property role="2Ry0Am" value="libre.doge.mps.dot.build.msd" />
-                </node>
+          <ref role="398BVh" node="2$bMr2pDqnv" resolve="root.module" />
+          <node concept="2Ry0Ak" id="2$bMr2pDqly" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="2$bMr2pDqlB" role="2Ry0An">
+              <property role="2Ry0Am" value="libre.doge.mps.dot.build" />
+              <node concept="2Ry0Ak" id="2$bMr2pF3Ca" role="2Ry0An">
+                <property role="2Ry0Am" value="libre.doge.mps.dot.build.msd" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="2$bMr2pDqlK" role="3bR37C">
-          <node concept="3bR9La" id="2$bMr2pDqlL" role="1SiIV1">
+        <node concept="1SiIV0" id="2$bMr2pF3Cc" role="3bR37C">
+          <node concept="3bR9La" id="2$bMr2pF3Cd" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
           </node>
         </node>
-        <node concept="1BupzO" id="2$bMr2pDqlW" role="3bR31x">
+        <node concept="1BupzO" id="2$bMr2pF3Co" role="3bR31x">
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="2$bMr2pDqlX" role="1HemKq">
-            <node concept="398BVA" id="2$bMr2pDqlM" role="3LXTmr">
-              <ref role="398BVh" node="2$bMr2pDqiY" resolve="project.root" />
-              <node concept="2Ry0Ak" id="2$bMr2pDqlN" role="iGT6I">
+          <node concept="3LXTmp" id="2$bMr2pF3Cp" role="1HemKq">
+            <node concept="398BVA" id="2$bMr2pF3Ce" role="3LXTmr">
+              <ref role="398BVh" node="2$bMr2pDqiY" resolve="root.project" />
+              <node concept="2Ry0Ak" id="2$bMr2pF3Cf" role="iGT6I">
                 <property role="2Ry0Am" value="mps" />
-                <node concept="2Ry0Ak" id="2$bMr2pDqlO" role="2Ry0An">
+                <node concept="2Ry0Ak" id="2$bMr2pF3Cg" role="2Ry0An">
                   <property role="2Ry0Am" value="solutions" />
-                  <node concept="2Ry0Ak" id="2$bMr2pDqlP" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="2$bMr2pF3Ch" role="2Ry0An">
                     <property role="2Ry0Am" value="libre.doge.mps.dot.build" />
-                    <node concept="2Ry0Ak" id="2$bMr2pDqlQ" role="2Ry0An">
+                    <node concept="2Ry0Ak" id="2$bMr2pF3Ci" role="2Ry0An">
                       <property role="2Ry0Am" value="models" />
                     </node>
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3qWCbU" id="2$bMr2pDqlY" role="3LXTna">
+            <node concept="3qWCbU" id="2$bMr2pF3Cq" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
+          </node>
+          <node concept="3LXTmp" id="2qgaZgvOiNs" role="1HemKq">
+            <node concept="398BVA" id="2qgaZgvOiNe" role="3LXTmr">
+              <ref role="398BVh" node="2$bMr2pDqnv" resolve="root.module" />
+              <node concept="2Ry0Ak" id="2qgaZgvOiNf" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="2qgaZgvOiNg" role="2Ry0An">
+                  <property role="2Ry0Am" value="libre.doge.mps.dot.build" />
+                  <node concept="2Ry0Ak" id="2qgaZgvOiNh" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="2qgaZgvOiNt" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="2$bMr2pF3Dg" role="3bR37C">
+          <node concept="3bR9La" id="2$bMr2pF3Dh" role="1SiIV1">
+            <ref role="3bR37D" to="90a9:PE3B26VOkn" resolve="de.itemis.mps.extensions.build" />
           </node>
         </node>
       </node>

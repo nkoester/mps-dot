@@ -128,7 +128,7 @@ val setup by tasks.registering {
 
 val buildScripts by tasks.registering(BuildLanguages::class) {
     dependsOn(setup)
-    script = "$projectDir/mps/buildAll.xml"
+    script = "$projectDir/build/buildAll.xml"
 }
 
 val buildLanguages by tasks.registering(BuildLanguages::class) {
