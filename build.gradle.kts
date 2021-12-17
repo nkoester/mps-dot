@@ -12,7 +12,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("de.itemis.mps:mps-gradle-plugin:1.5.269.964f94a")
+        classpath("de.itemis.mps:mps-gradle-plugin:1.6.281.3790039")
     }
 }
 
@@ -53,17 +53,17 @@ object Versions {
     public const val jbr: String = "11_0_10-b1145.96"
     public const val jbrsdk: String = "11_0_10-b1145.96"
     //TODO: how to use this in plugins block?
-    public const val downloadJBR: String = "1.5.269.964f94a"
+    public const val downloadJBR: String = "1.6.281.3790039"
 
     // mps
-    public const val mpsMajor: String = "2020"
-    public const val mpsMinor: String = "3"
-    public const val mpsPatch: String = "5"
+    public const val mpsMajor: String = "2021"
+    public const val mpsMinor: String = "2"
+    public const val mpsPatch: String = "3"
     public const val mpsMajorMinor: String = Versions.mpsMajor + "." + Versions.mpsMinor
     public const val mpsFull: String = Versions.mpsMajorMinor + "." + Versions.mpsPatch
 
     // mps dependencies
-    public const val extensions: String = "2020.3.2132.3630910"
+    public const val extensions: String = "2021.2.2153.75213bf"
     public const val antjunit: String = "1.10.6"
 
     override fun toString() : String{
