@@ -163,12 +163,12 @@
   </registry>
   <node concept="1l3spW" id="74BOdhSGtEr">
     <property role="TrG5h" value="de.doge.mps.dot.build" />
-    <property role="2DA0ip" value="../../.." />
+    <property role="2DA0ip" value="../../../build" />
     <node concept="398rNT" id="2$bMr2pDqiY" role="1l3spd">
       <property role="TrG5h" value="root.project" />
       <node concept="55IIr" id="2$bMr2pDqj2" role="398pKh">
         <node concept="2Ry0Ak" id="2$bMr2pDqj5" role="iGT6I">
-          <property role="2Ry0Am" value="" />
+          <property role="2Ry0Am" value=".." />
         </node>
       </node>
     </node>
