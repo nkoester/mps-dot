@@ -2,20 +2,24 @@
 
 ## Description
 
-The Graphviz Dot language as a Jetbrains MPS language
+The [Graphviz Dot](https://de.wikipedia.org/wiki/DOT_(GraphViz)) language as a [Jetbrains MPS](https://en.wikipedia.org/wiki/JetBrains_MPS) language.
 
-The currently supported MPS version is **2020.3.5**.
+The currently supported MPS version is **2020.3.5**. Other supported versions are on their respective branches prefixed with `maintenance/mps20XXY`
 
-The implemented dot to text generator requires the `mps-plaintextgen` plugin which is part of the `mps-extensions`.
+The implemented dot-to-text generator requires the `mps-plaintextgen` plugin which is part of the [mps-extensions](https://github.com/JetBrains/MPS-extensions)
 
 
 ## Build Instructions
 
-A bould requires at least Java 11 to kick off. Build is started via
+A build requires at least Java 11 to kick off. Build is started via:
 
 ```
-./gradlew build
+./gradlew # Mac and Linux
 ```
-All dependencies are obtained automatically by gradle. And the correct Java version for the build itself is also downloaded
 
-Artifacts are generated to `build/artifacts/de.doge.mps.dot`.
+or
+```
+# gradlew.bat # Windows
+```
+
+All dependencies (including the correct Java version for the build itself) are obtained automatically by gradle. The build generates artifacts to `build/artifacts/`.
