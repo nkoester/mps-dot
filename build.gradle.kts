@@ -20,7 +20,18 @@ plugins {
     id("download-jbr") version "1.5.269.964f94a"
 }
 
+// Obtain gihub credentials for github packages access
+var githubUsername = project.findProperty("gpr.user") as String? ?: System.getenv("githubUsername")
+var githubToken = project.findProperty("gpr.token") as String? ?: System.getenv("githubToken")
+
 repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/mbeddr/mps-gradle-plugin")
+        credentials {
+            username = githubUsername
+            password = githubToken
+        }
+    }
     maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
     mavenCentral()
 }

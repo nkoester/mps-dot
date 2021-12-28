@@ -1,5 +1,7 @@
 # mps-dot
 
+[![Build and Publish Languages](https://github.com/nkoester/mps-dot/actions/workflows/buildAndPublish.yml/badge.svg?branch=main)](https://github.com/nkoester/mps-dot/actions/workflows/buildAndPublish.yml) (main)
+
 ## Description
 
 The [Graphviz Dot](https://de.wikipedia.org/wiki/DOT_(GraphViz)) language as a [Jetbrains MPS](https://en.wikipedia.org/wiki/JetBrains_MPS) language.
