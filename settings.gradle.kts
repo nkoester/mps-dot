@@ -17,7 +17,7 @@ pluginManagement {
                 password = githubToken
             }
         }
-        maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
+        // maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
         gradlePluginPortal()
     }
 }
