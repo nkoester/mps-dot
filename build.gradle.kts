@@ -25,7 +25,6 @@ var githubUsername = project.findProperty("gpr.user") as String? ?: System.geten
 var githubToken = project.findProperty("gpr.token") as String? ?: System.getenv("githubToken")
 
 repositories {
-    maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
     maven {
         url = uri("https://maven.pkg.github.com/mbeddr/mps-gradle-plugin")
         credentials {
@@ -33,6 +32,7 @@ repositories {
             password = githubToken
         }
     }
+    maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
     mavenCentral()
 }
 
