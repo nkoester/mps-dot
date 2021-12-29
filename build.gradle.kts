@@ -58,7 +58,7 @@ val buildDependencies: Configuration by configurations.creating
 dependencies {
     mpsDependencies("de.itemis.mps:extensions:" + Versions.extensions)
     mps("com.jetbrains:mps:" + Versions.mpsFull)
-    buildDependencies("org.apache.ant:ant-junit:" + Versions.antjunit)
+    //buildDependencies("org.apache.ant:ant-junit:" + Versions.antjunit)
 }
 
 // misc
@@ -89,7 +89,7 @@ object Versions {
 
     // mps dependencies
     public const val extensions: String = "2021.1.2150.821d1bc"
-    public const val antjunit: String = "1.10.6"
+    // public const val antjunit: String = "1.10.6"
 
     override fun toString() : String{
         return "\n"+ this::class.java.declaredFields.filter{ it.name != "INSTANCE" }.map { " - ${it.name} = \"${it.get(Versions)}\"" }.joinToString("\n")
