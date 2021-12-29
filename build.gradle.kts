@@ -82,13 +82,13 @@ object Versions {
 
     // mps
     public const val mpsMajor: String = "2021"
-    public const val mpsMinor: String = "2"
+    public const val mpsMinor: String = "1"
     public const val mpsPatch: String = "3"
     public const val mpsMajorMinor: String = Versions.mpsMajor + "." + Versions.mpsMinor
     public const val mpsFull: String = Versions.mpsMajorMinor + "." + Versions.mpsPatch
 
     // mps dependencies
-    public const val extensions: String = "2021.2.2153.75213bf"
+    public const val extensions: String = "2021.1.2150.821d1bc"
     public const val antjunit: String = "1.10.6"
 
     override fun toString() : String{
