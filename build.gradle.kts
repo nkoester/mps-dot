@@ -8,7 +8,6 @@ import kotlin.reflect.full.memberProperties
 buildscript {
     repositories {
         maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
-        mavenCentral()
     }
 
     dependencies {
@@ -17,6 +16,7 @@ buildscript {
 }
 
 plugins {
+    id("maven-publish")
     id("download-jbr") version "1.5.269.964f94a"
 }
 
@@ -166,3 +166,21 @@ val buildLanguages by tasks.registering(BuildLanguages::class) {
 
 defaultTasks("buildLanguages")
 
+
+val branch = GitBasedVersioning.getGitBranch()
+
+publishing {
+    repositories {
+        if(branch.equals("master") || branch.equals("maintenance")) {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/nkoester/mps-dot")
+                credentials {
+                    // or use githubUsername and githubToken ?
+                    username = System.getenv("GITHUB_ACTOR")
+                    password = System.getenv("GITHUB_TOKEN")
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,8 @@ pluginManagement {
     }
 
     repositories {
-         maven {
+        mavenLocal()
+        maven {
             url = uri("https://maven.pkg.github.com/mbeddr/mps-gradle-plugin")
             credentials {
                 username = githubUsername
