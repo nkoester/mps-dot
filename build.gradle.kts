@@ -171,7 +171,7 @@ val branch = GitBasedVersioning.getGitBranch()
 
 publishing {
     repositories {
-        if(branch.equals("master") || branch.equals("maintenance")) {
+        // if(branch.equals("master") || branch.equals("maintenance")) {
             maven {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/nkoester/mps-dot")
@@ -181,6 +181,6 @@ publishing {
                     password = System.getenv("GITHUB_TOKEN")
                 }
             }
-        }
+        // }
     }
 }
