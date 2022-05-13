@@ -22,13 +22,17 @@ plugins {
 
 repositories {
     // Obtain gihub credentials for github packages access
-    val gpruser: String? by extra
-    val gprtoken: String? by extra
-    val githubUsername  = System.getenv("GITHUB_ACTOR") ?: gpruser as String?
-    val githubToken  = System.getenv("GITHUB_TOKEN") ?: gprtoken as String?
+    val gpr_user: String? by extra
+    val gpr_token: String? by extra
+    val githubUsername = System.getenv("GITHUB_ACTOR") ?: gpr_user
+    val githubToken = System.getenv("GITHUB_TOKEN") ?: gpr_token
 
-    if(githubUsername == null || githubToken == null) {
-        throw GradleException("No credentials found via envrionment variable (\$GITHUB_ACTOR/\$GITHUB_TOKEN) or via gradle properties (gpruser/gprtoken) for auth towards Github packages")
+    if(githubUsername == null || githubUsername == "" ) {
+        throw GradleException("No credentials found via envrionment variable (\$GITHUB_ACTOR) or via gradle properties (gpr_user) for auth towards Github packages")
+    }
+
+    if(githubToken == null || githubToken == "") {
+        throw GradleException("No credentials found via envrionment variable (\$GITHUB_TOKEN) or via gradle properties (gpr_token) for auth towards Github packages")
     }
 
     maven {
@@ -74,6 +78,9 @@ downloadJbr {
 
 // dependency versions
 object Versions {
+    public const val groupID: String = "libre.doge"
+    public const val artifactID: String = "dot"
+    public const val fullID: String =  Versions.groupID + "." + Versions.artifactID
     // java
     public const val jbr: String = "11_0_10-b1145.96"
     public const val jbrsdk: String = "11_0_10-b1145.96"
@@ -158,11 +165,20 @@ val buildScripts by tasks.registering(BuildLanguages::class) {
 }
 
 val buildLanguages by tasks.registering(BuildLanguages::class) {
+    dependsOn(buildScripts)
     group = "build"
     description = "Build all languages in the MPS project"
     script = "$buildDir/build.xml"
-    dependsOn(buildScripts)
 }
+
+// val packageModules by tasks.registering(Zip::class) {
+//     dependsOn(buildLanguages)
+//     description = "Packages all build languages to a zip file"
+//     // baseName Versions.fullID
+//     // baseName "wat"
+//     // from "$buildDir"
+//     // include Versions.fullID+"/**"
+// }
 
 defaultTasks("buildLanguages")
 
@@ -177,10 +193,19 @@ publishing {
                 url = uri("https://maven.pkg.github.com/nkoester/mps-dot")
                 credentials {
                     // or use githubUsername and githubToken ?
-                    username = System.getenv("GITHUB_ACTOR")
-                    password = System.getenv("GITHUB_TOKEN")
+                    username = project.findProperty("gpr_user") as String? ?: System.getenv("GITHUB_ACTOR") as String?
+                    password = project.findProperty("gpr_token") as String? ?: System.getenv("GITHUB_TOKEN") as String?
                 }
             }
         // }
     }
+    publications {
+        create<MavenPublication>("packagedModules"){
+            groupId = Versions.groupID
+            artifactId = Versions.artifactID
+            artifact(buildLanguages)
+            // addDependency(pom, configurations.mpsDependencies)
+        }
+    }
+
 }
