@@ -10,6 +10,10 @@ on:
     types: [opened]
   workflow_dispatch:
 
+env:
+  GITHUB_ACTOR: ${{ github.actor }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "buildAndTest"
@@ -35,9 +39,7 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v1.3.3
       with:
-        arguments: buildLanguages -Pgpruser=${{github.actor}} -Pgprtoken=${{ secrets.GITHUB_TOKEN }}
+        arguments: buildLanguages
 
     - name: Publish package
       run: gradle publish
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

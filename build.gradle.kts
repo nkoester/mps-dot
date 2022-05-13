@@ -70,6 +70,7 @@ val codeDir = file("mps")
 val mpsDir = file("$buildDir/mps")
 val dependencyDir = file("$codeDir/dependencies")
 val jbrDir = file("$buildDir/jbr")
+val publishDir = file("$buildDir/dist")
 val gitBranch: String = GitBasedVersioning.getGitBranch()
 
 downloadJbr {
@@ -93,6 +94,9 @@ object Versions {
     public const val mpsPatch: String = "3"
     public const val mpsMajorMinor: String = Versions.mpsMajor + "." + Versions.mpsMinor
     public const val mpsFull: String = Versions.mpsMajorMinor + "." + Versions.mpsPatch
+
+    // this project
+    public const val buildVerison: String = Versions.mpsFull + "-SNAPSHOT"
 
     // mps dependencies
     public const val extensions: String = "2021.1.2150.821d1bc"
@@ -134,9 +138,10 @@ val printVersions by tasks.registering {
 
         // println("CI build: "+ ext["ciBuild"])
         logger.lifecycle("Build directory: {}", buildDir)
+        logger.lifecycle("Publish directory: {}", publishDir)
         logger.lifecycle("MPS directory: {}", mpsDir)
 
-        logger.lifecycle("Dependency verisons: {}", Versions.toString())
+        logger.lifecycle("Dependency versions: {}", Versions.toString())
     }
 }
 
@@ -171,23 +176,24 @@ val buildLanguages by tasks.registering(BuildLanguages::class) {
     script = "$buildDir/build.xml"
 }
 
-// val packageModules by tasks.registering(Zip::class) {
-//     dependsOn(buildLanguages)
-//     description = "Packages all build languages to a zip file"
-//     // baseName Versions.fullID
-//     // baseName "wat"
-//     // from "$buildDir"
-//     // include Versions.fullID+"/**"
-// }
-
 defaultTasks("buildLanguages")
+
+// Publishing
+val packageMpsPlugin by tasks.registering(Zip::class) {
+    dependsOn(buildLanguages)
+    archiveFileName.set(Versions.groupID + "." + Versions.artifactID + "." + Versions.buildVerison + ".zip")
+
+    from(file("build/artifacts/de.doge.mps.dot.build"))
+    destinationDirectory.set(publishDir)
+}
 
 
 val branch = GitBasedVersioning.getGitBranch()
 
 publishing {
     repositories {
-        // if(branch.equals("master") || branch.equals("maintenance")) {
+        if(branch.equals("main") || branch.equals("maintenance")) {
+            logger.lifecycle("Will publish, (branch is '{}')", branch)
             maven {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/nkoester/mps-dot")
@@ -197,14 +203,17 @@ publishing {
                     password = project.findProperty("gpr_token") as String? ?: System.getenv("GITHUB_TOKEN") as String?
                 }
             }
-        // }
+        } else {
+            logger.lifecycle("Will not publish, (branch is '{}')", branch)
+        }
+
     }
     publications {
         create<MavenPublication>("packagedModules"){
-            groupId = Versions.groupID
             artifactId = Versions.artifactID
-            artifact(buildLanguages)
-            // addDependency(pom, configurations.mpsDependencies)
+            groupId = Versions.groupID
+            version = Versions.buildVerison
+            artifact(packageMpsPlugin)
         }
     }
 
