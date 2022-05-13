@@ -101,7 +101,9 @@
     <node concept="398rNT" id="2$bMr2pDqiY" role="1l3spd">
       <property role="TrG5h" value="root.project" />
       <node concept="55IIr" id="2$bMr2pDqj2" role="398pKh">
-        <node concept="2Ry0Ak" id="2$bMr2pDqj5" role="iGT6I" />
+        <node concept="2Ry0Ak" id="5MUOTmzVSHX" role="iGT6I">
+          <property role="2Ry0Am" value="" />
+        </node>
       </node>
     </node>
     <node concept="398rNT" id="2$bMr2pDqjd" role="1l3spd">
@@ -192,26 +194,6 @@
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="2$bMr2pF3Cp" role="1HemKq">
-            <node concept="398BVA" id="2$bMr2pF3Ce" role="3LXTmr">
-              <ref role="398BVh" node="2$bMr2pDqiY" resolve="root.project" />
-              <node concept="2Ry0Ak" id="2$bMr2pF3Cf" role="iGT6I">
-                <property role="2Ry0Am" value="mps" />
-                <node concept="2Ry0Ak" id="2$bMr2pF3Cg" role="2Ry0An">
-                  <property role="2Ry0Am" value="solutions" />
-                  <node concept="2Ry0Ak" id="2$bMr2pF3Ch" role="2Ry0An">
-                    <property role="2Ry0Am" value="libre.doge.mps.dot.build" />
-                    <node concept="2Ry0Ak" id="2$bMr2pF3Ci" role="2Ry0An">
-                      <property role="2Ry0Am" value="models" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3qWCbU" id="2$bMr2pF3Cq" role="3LXTna">
-              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
-            </node>
-          </node>
           <node concept="3LXTmp" id="2qgaZgvOiNs" role="1HemKq">
             <node concept="398BVA" id="2qgaZgvOiNe" role="3LXTmr">
               <ref role="398BVh" node="2$bMr2pDqnv" resolve="root.module" />

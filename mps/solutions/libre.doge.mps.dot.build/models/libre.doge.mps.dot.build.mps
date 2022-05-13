@@ -89,8 +89,18 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps">
@@ -239,10 +249,14 @@
         <ref role="398BVh" node="2$bMr2pDqij" resolve="root.mps" />
       </node>
     </node>
-    <node concept="2sgV4H" id="74BOdhSN_2j" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:5D1dJ7xWer5" resolve="mpsCore" />
-      <node concept="398BVA" id="74BOdhSN_2X" role="2JcizS">
-        <ref role="398BVh" node="2$bMr2pDqij" resolve="root.mps" />
+    <node concept="1X3_iC" id="5MUOTmzW1pq" role="lGtFl">
+      <property role="3V$3am" value="dependencies" />
+      <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/5617550519002745363/5617550519002745381" />
+      <node concept="2sgV4H" id="74BOdhSN_2j" role="8Wnug">
+        <ref role="1l3spb" to="ffeo:5D1dJ7xWer5" resolve="mpsCore" />
+        <node concept="398BVA" id="74BOdhSN_2X" role="2JcizS">
+          <ref role="398BVh" node="2$bMr2pDqij" resolve="root.mps" />
+        </node>
       </node>
     </node>
     <node concept="2sgV4H" id="6ucYLjotvKQ" role="1l3spa">
@@ -395,9 +409,9 @@
         </node>
       </node>
       <node concept="1E1JtD" id="2$bMr2pElCI" role="2G$12L">
-        <property role="BnDLt" value="true" />
         <property role="TrG5h" value="libre.doge.mps.dot.plaintextgen" />
         <property role="3LESm3" value="de08ce63-db43-4eb1-bab6-26bd8eae3b16" />
+        <property role="BnDLt" value="true" />
         <node concept="398BVA" id="2$bMr2pElDq" role="3LF7KH">
           <ref role="398BVh" node="2$bMr2pDqnv" resolve="root.module" />
           <node concept="2Ry0Ak" id="2$bMr2pElDw" role="iGT6I">
@@ -484,9 +498,9 @@
         </node>
       </node>
       <node concept="3LEwk6" id="58ZMa6mPPqA" role="2G$12L">
-        <property role="BnDLt" value="true" />
         <property role="TrG5h" value="libre.doge.mps.dot.devkit" />
         <property role="3LESm3" value="c5093ec9-39ec-4fce-8f7a-67baf9750637" />
+        <property role="BnDLt" value="true" />
         <node concept="398BVA" id="2$bMr2pDqqp" role="3LF7KH">
           <ref role="398BVh" node="2$bMr2pDqnv" resolve="root.module" />
           <node concept="2Ry0Ak" id="2$bMr2pDqqu" role="iGT6I">
