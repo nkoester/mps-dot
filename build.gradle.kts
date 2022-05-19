@@ -50,6 +50,11 @@ repositories {
                 password = githubToken
         }
     }
+
+    maven {
+        url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr")
+    }
+
     //maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
     mavenCentral()
 }
@@ -89,9 +94,9 @@ object Versions {
     public const val downloadJBR: String = "1.6.281.3790039"
 
     // mps
-    public const val mpsMajor: String = "2021"
-    public const val mpsMinor: String = "1"
-    public const val mpsPatch: String = "3"
+    public const val mpsMajor: String = "2019"
+    public const val mpsMinor: String = "3"
+    public const val mpsPatch: String = "7"
     public const val mpsMajorMinor: String = Versions.mpsMajor + "." + Versions.mpsMinor
     public const val mpsFull: String = Versions.mpsMajorMinor + "." + Versions.mpsPatch
 
@@ -99,7 +104,7 @@ object Versions {
     public const val buildVerison: String = Versions.mpsFull + "-SNAPSHOT"
 
     // mps dependencies
-    public const val extensions: String = "2021.1.2150.821d1bc"
+    public const val extensions: String = "2019.3.1746.2abe98b"
     public const val antjunit: String = "1.10.6"
 
     override fun toString() : String{
