@@ -84,7 +84,7 @@ downloadJbr {
 
 // dependency versions
 object Versions {
-    public const val groupID: String = "libre.doge"
+    public const val groupID: String = "libre.doge.mps"
     public const val artifactID: String = "dot"
     public const val fullID: String =  Versions.groupID + "." + Versions.artifactID
     // java

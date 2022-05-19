@@ -85,27 +85,22 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
-      </concept>
     </language>
     <language id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps">
+      <concept id="7832771629084799699" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginVendor" flags="ng" index="2iUeEo">
+        <property id="7832771629084799702" name="name" index="2iUeEt" />
+        <property id="7832771629084799701" name="url" index="2iUeEu" />
+      </concept>
       <concept id="6592112598314586625" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginGroup" flags="ng" index="m$f5U">
         <reference id="6592112598314586626" name="group" index="m$f5T" />
       </concept>
       <concept id="6592112598314498932" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPlugin" flags="ng" index="m$_wf">
         <property id="6592112598314498927" name="id" index="m$_wk" />
         <child id="1359186315025500371" name="xml" index="20twgj" />
+        <child id="7832771629084912518" name="vendor" index="2iVFfd" />
         <child id="6592112598314498931" name="version" index="m$_w8" />
         <child id="6592112598314499050" name="content" index="m$_yh" />
         <child id="6592112598314499028" name="dependencies" index="m$_yJ" />
@@ -234,7 +229,7 @@
       <node concept="aVJcg" id="78xf10wcBY2" role="aVJcv">
         <node concept="NbPM2" id="78xf10wcBY3" role="aVJcq">
           <node concept="3Mxwew" id="78xf10wcBY4" role="3MwsjC">
-            <property role="3MwjfP" value="2020.3" />
+            <property role="3MwjfP" value="2019.3.7" />
           </node>
         </node>
       </node>
@@ -243,16 +238,6 @@
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="74BOdhSGtEw" role="2JcizS">
         <ref role="398BVh" node="2$bMr2pDqij" resolve="root.mps" />
-      </node>
-    </node>
-    <node concept="1X3_iC" id="5MUOTmzW1pq" role="lGtFl">
-      <property role="3V$3am" value="dependencies" />
-      <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/5617550519002745363/5617550519002745381" />
-      <node concept="2sgV4H" id="74BOdhSN_2j" role="8Wnug">
-        <ref role="1l3spb" to="ffeo:5D1dJ7xWer5" resolve="mpsCore" />
-        <node concept="398BVA" id="74BOdhSN_2X" role="2JcizS">
-          <ref role="398BVh" node="2$bMr2pDqij" resolve="root.mps" />
-        </node>
       </node>
     </node>
     <node concept="2sgV4H" id="6ucYLjotvKQ" role="1l3spa">
@@ -271,6 +256,106 @@
       <node concept="m$_wl" id="2f79Z3qMM9j" role="39821P">
         <ref role="m_rDy" node="74BOdhSGtEC" resolve="libre.doge.mps.dot" />
         <node concept="pUk6x" id="2f79Z3qMM9u" role="pUk7w" />
+      </node>
+      <node concept="m$_wl" id="3k6OJdH$3J0" role="39821P">
+        <ref role="m_rDy" node="3k6OJdH$3CW" resolve="libre.doge.mps.dot.build" />
+        <node concept="pUk6x" id="3k6OJdH$3J8" role="pUk7w" />
+      </node>
+    </node>
+    <node concept="m$_wf" id="3k6OJdH$3CW" role="3989C9">
+      <property role="m$_wk" value="libre.doge.mps.dot.build" />
+      <node concept="2pNNFK" id="3k6OJdH$3Ka" role="20twgj">
+        <property role="2pNNFO" value="vendor" />
+        <node concept="2pNUuL" id="3k6OJdH$3Kb" role="2pNNFR">
+          <property role="2pNUuO" value="email" />
+          <node concept="2pMdtt" id="3k6OJdH$3Kc" role="2pMdts">
+            <property role="2pMdty" value="nkoester@posteo.de" />
+          </node>
+        </node>
+        <node concept="2pNUuL" id="3k6OJdH$3Kd" role="2pNNFR">
+          <property role="2pNUuO" value="url" />
+          <node concept="2pMdtt" id="3k6OJdH$3Ke" role="2pMdts" />
+        </node>
+        <node concept="3o6iSG" id="3k6OJdH$3Kf" role="3o6s8t">
+          <property role="3o6i5n" value="nkoester" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="3k6OJdH$3CY" role="m$_yQ">
+        <node concept="3Mxwew" id="3k6OJdH$3Fa" role="3MwsjC">
+          <property role="3MwjfP" value="libre.doge.mps.dot.build" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="3k6OJdH$3D0" role="m_cZH">
+        <node concept="3Mxwew" id="3k6OJdH$3F8" role="3MwsjC">
+          <property role="3MwjfP" value="libre.doge.mps.dot.build" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="3k6OJdH$3D2" role="m$_w8">
+        <node concept="3Mxwey" id="3k6OJdH$3F6" role="3MwsjC">
+          <ref role="3Mxwex" node="78xf10wcBY1" resolve="current.version" />
+        </node>
+      </node>
+      <node concept="m$f5U" id="3k6OJdH$3EZ" role="m$_yh">
+        <ref role="m$f5T" node="3k6OJdH$3_q" resolve="libre.doge.mps.dot.build" />
+      </node>
+      <node concept="m$_yC" id="3k6OJdH$3F4" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:4hvHh3QW$Eh" resolve="de.itemis.mps.extensions.build" />
+      </node>
+      <node concept="2iUeEo" id="3k6OJdH$3Ku" role="2iVFfd">
+        <property role="2iUeEt" value="libre.doge" />
+        <property role="2iUeEu" value="https://github.com/nkoester/mps-dot" />
+      </node>
+    </node>
+    <node concept="2G$12M" id="3k6OJdH$3_q" role="3989C9">
+      <property role="TrG5h" value="libre.doge.mps.dot.build" />
+      <node concept="1E1JtA" id="3k6OJdH$3us" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="libre.doge.mps.dot.build" />
+        <property role="3LESm3" value="d7ba70f9-2674-4db6-8c37-518c70d355ae" />
+        <node concept="398BVA" id="3k6OJdH$3vF" role="3LF7KH">
+          <ref role="398BVh" node="2$bMr2pDqnv" resolve="root.module" />
+          <node concept="2Ry0Ak" id="3k6OJdH$3vL" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="3k6OJdH$3vQ" role="2Ry0An">
+              <property role="2Ry0Am" value="libre.doge.mps.dot.build" />
+              <node concept="2Ry0Ak" id="3k6OJdH$3vV" role="2Ry0An">
+                <property role="2Ry0Am" value="libre.doge.mps.dot.build.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3k6OJdH$3wz" role="3bR37C">
+          <node concept="3bR9La" id="3k6OJdH$3w$" role="1SiIV1">
+            <ref role="3bR37D" to="90a9:PE3B26VOkn" resolve="de.itemis.mps.extensions.build" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3k6OJdH$3w_" role="3bR37C">
+          <node concept="3bR9La" id="3k6OJdH$3wA" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="3k6OJdH$3wK" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="3k6OJdH$3wL" role="1HemKq">
+            <node concept="398BVA" id="3k6OJdH$3wB" role="3LXTmr">
+              <ref role="398BVh" node="2$bMr2pDqnv" resolve="root.module" />
+              <node concept="2Ry0Ak" id="3k6OJdH$3wC" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="3k6OJdH$3wD" role="2Ry0An">
+                  <property role="2Ry0Am" value="libre.doge.mps.dot.build" />
+                  <node concept="2Ry0Ak" id="3k6OJdH$3wE" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="3k6OJdH$3wM" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="m$_wf" id="74BOdhSGtEC" role="3989C9">
@@ -323,6 +408,10 @@
         <node concept="3Mxwew" id="74BOdhSGtEK" role="3MwsjC">
           <property role="3MwjfP" value="libre.doge.mps.dot" />
         </node>
+      </node>
+      <node concept="2iUeEo" id="3k6OJdH$3KA" role="2iVFfd">
+        <property role="2iUeEt" value="libre.doge" />
+        <property role="2iUeEu" value="https://github.com/nkoester/mps-dot" />
       </node>
     </node>
     <node concept="2G$12M" id="74BOdhSGtEB" role="3989C9">
