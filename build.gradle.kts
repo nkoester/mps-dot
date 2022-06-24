@@ -7,17 +7,20 @@ import kotlin.reflect.full.memberProperties
 
 buildscript {
     repositories {
+        maven { url = uri("https://artifacts.itemis.cloud/repository/maven-mps/") }
         maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
     }
 
     dependencies {
         classpath("de.itemis.mps:mps-gradle-plugin:1.6.281.3790039")
+        classpath("org.modelix.mpsbuild:gradle-plugin:0.0.13")
     }
 }
 
 plugins {
     id("maven-publish")
     id("download-jbr") version "1.5.269.964f94a"
+    id("modelix-gradle-mpsbuild-plugin")
 }
 
 repositories {
@@ -34,6 +37,8 @@ repositories {
     if(githubToken == null || githubToken == "") {
         throw GradleException("No credentials found via envrionment variable (\$GITHUB_TOKEN) or via gradle properties (gpr_token) for auth towards Github packages")
     }
+
+    maven { url = uri("https://artifacts.itemis.cloud/repository/maven-mps/") }
 
     maven {
         url = uri("https://maven.pkg.github.com/JetBrains/MPS-extensions")
