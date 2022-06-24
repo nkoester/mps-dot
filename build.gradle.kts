@@ -13,14 +13,14 @@ buildscript {
 
     dependencies {
         classpath("de.itemis.mps:mps-gradle-plugin:1.6.281.3790039")
-        classpath("org.modelix.mpsbuild:gradle-plugin:0.0.13")
+        classpath("org.modelix.mpsbuild:gradle-plugin:1.0.+")
     }
 }
 
 plugins {
     id("maven-publish")
     id("download-jbr") version "1.5.269.964f94a"
-    id("modelix-gradle-mpsbuild-plugin")
+    id("modelix-gradle-mpsbuild-plugin") version "1.0.+"
 }
 
 repositories {
