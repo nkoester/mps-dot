@@ -17,10 +17,11 @@ buildscript {
     }
 }
 
+apply(plugin = "modelix-gradle-mpsbuild-plugin")
+
 plugins {
     id("maven-publish")
     id("download-jbr") version "1.5.269.964f94a"
-    id("modelix-gradle-mpsbuild-plugin") version "1.0.+"
 }
 
 repositories {
