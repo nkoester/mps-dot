@@ -7,17 +7,18 @@ import kotlin.reflect.full.memberProperties
 
 buildscript {
     repositories {
-        maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
+        maven { url = uri("https://artifacts.itemis.cloud/repository/maven-mps/") }
     }
 
     dependencies {
-        classpath("de.itemis.mps:mps-gradle-plugin:1.6.281.3790039")
+        classpath("de.itemis.mps:mps-gradle-plugin:1.28.0.1.f8ee996")
     }
 }
 
 plugins {
     id("maven-publish")
     id("download-jbr") version "1.5.269.964f94a"
+    id("org.modelix.mps.build-tools") version "1.0.10-3-g7dcb0d3.dirty-SNAPSHOT"
 }
 
 repositories {
@@ -50,6 +51,11 @@ repositories {
                 password = githubToken
         }
     }
+
+    maven {
+        url = uri("https://artifacts.itemis.cloud/repository/maven-mps/")
+    }
+
     //maven { url = uri("https://projects.itemis.de/nexus/content/repositories/mbeddr") }
     mavenCentral()
 }
@@ -90,8 +96,8 @@ object Versions {
 
     // mps
     public const val mpsMajor: String = "2021"
-    public const val mpsMinor: String = "1"
-    public const val mpsPatch: String = "3"
+    public const val mpsMinor: String = "3"
+    public const val mpsPatch: String = "5"
     public const val mpsMajorMinor: String = Versions.mpsMajor + "." + Versions.mpsMinor
     public const val mpsFull: String = Versions.mpsMajorMinor + "." + Versions.mpsPatch
 
@@ -99,7 +105,7 @@ object Versions {
     public const val buildVerison: String = Versions.mpsFull + "-SNAPSHOT"
 
     // mps dependencies
-    public const val extensions: String = "2021.1.2150.821d1bc"
+    public const val extensions: String = "2021.3.2869.e5eae69"
     public const val antjunit: String = "1.10.6"
 
     override fun toString() : String{
@@ -107,10 +113,6 @@ object Versions {
     }
 
 }
-
-
-
-
 
 // tasks
 val extractMps by tasks.registering(Copy::class) {
@@ -183,7 +185,7 @@ val packageMpsPlugin by tasks.registering(Zip::class) {
     dependsOn(buildLanguages)
     archiveFileName.set(Versions.groupID + "." + Versions.artifactID + "." + Versions.buildVerison + ".zip")
 
-    from(file("build/artifacts/de.doge.mps.dot.build"))
+    from(file("build/artifacts/de.doge.dot.build"))
     destinationDirectory.set(publishDir)
 }
 
@@ -218,3 +220,4 @@ publishing {
     }
 
 }
+

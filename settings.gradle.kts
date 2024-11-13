@@ -16,6 +16,9 @@ pluginManagement {
     }
 
     repositories {
+
+        maven { url = uri("https://artifacts.itemis.cloud/repository/maven-mps/") }
+
         mavenLocal()
         maven {
             url = uri("https://maven.pkg.github.com/mbeddr/mps-gradle-plugin")

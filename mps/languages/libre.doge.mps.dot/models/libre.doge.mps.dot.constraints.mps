@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="6" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
@@ -72,9 +72,6 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="8356039341262087992" name="line" index="1aUNEU" />
-      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1170345865475" name="jetbrains.mps.baseLanguage.structure.AnonymousClass" flags="ig" index="1Y3b0j">
         <reference id="1170346070688" name="classifier" index="1Y3XeK" />
@@ -122,14 +119,6 @@
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
-    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
-      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="nn" index="3oM_SD">
-        <property id="155656958578482949" name="value" index="3oM_SC" />
-      </concept>
-      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC">
-        <child id="2535923850359271783" name="elements" index="1PaTwD" />
-      </concept>
-    </language>
   </registry>
   <node concept="1M2fIO" id="6kz3fYXUDcd">
     <property role="3GE5qa" value="ids" />
@@ -139,37 +128,6 @@
       <node concept="3dgokm" id="6kz3fYXUF4F" role="1N6uqs">
         <node concept="3clFbS" id="6kz3fYXUF4G" role="2VODD2">
           <node concept="3clFbH" id="ueqXiWqNxb" role="3cqZAp" />
-          <node concept="3SKdUt" id="ueqXiWma5j" role="3cqZAp">
-            <node concept="1PaTwC" id="58ZMa6mN61g" role="1aUNEU">
-              <node concept="3oM_SD" id="58ZMa6mN61h" role="1PaTwD">
-                <property role="3oM_SC" value="only" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61i" role="1PaTwD">
-                <property role="3oM_SC" value="present" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61j" role="1PaTwD">
-                <property role="3oM_SC" value="references" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61k" role="1PaTwD">
-                <property role="3oM_SC" value="to" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61l" role="1PaTwD">
-                <property role="3oM_SC" value="variables" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61m" role="1PaTwD">
-                <property role="3oM_SC" value="within" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61n" role="1PaTwD">
-                <property role="3oM_SC" value="the" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61o" role="1PaTwD">
-                <property role="3oM_SC" value="same" />
-              </node>
-              <node concept="3oM_SD" id="58ZMa6mN61p" role="1PaTwD">
-                <property role="3oM_SC" value="sheet" />
-              </node>
-            </node>
-          </node>
           <node concept="3cpWs8" id="ueqXiWma5l" role="3cqZAp">
             <node concept="3cpWsn" id="ueqXiWma5m" role="3cpWs9">
               <property role="TrG5h" value="ls" />
