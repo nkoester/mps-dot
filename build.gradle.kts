@@ -18,7 +18,6 @@ buildscript {
 plugins {
     id("maven-publish")
     id("download-jbr") version "1.5.269.964f94a"
-    id("org.modelix.mps.build-tools") version "1.0.10-3-g7dcb0d3.dirty-SNAPSHOT"
 }
 
 repositories {
@@ -185,7 +184,7 @@ val packageMpsPlugin by tasks.registering(Zip::class) {
     dependsOn(buildLanguages)
     archiveFileName.set(Versions.groupID + "." + Versions.artifactID + "." + Versions.buildVerison + ".zip")
 
-    from(file("build/artifacts/de.doge.dot.build"))
+    from(file("build/artifacts/de.doge.mps.dot.build"))
     destinationDirectory.set(publishDir)
 }
 
