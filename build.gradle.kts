@@ -12,11 +12,8 @@ buildscript {
 
     dependencies {
         classpath("de.itemis.mps:mps-gradle-plugin:1.28.0.1.f8ee996")
-        classpath("org.modelix.mpsbuild:gradle-plugin:1.0.+")
     }
 }
-
-apply(plugin = "modelix-gradle-mpsbuild-plugin")
 
 plugins {
     id("maven-publish")
@@ -117,10 +114,6 @@ object Versions {
 
 }
 
-
-
-
-
 // tasks
 val extractMps by tasks.registering(Copy::class) {
     from({ mps.resolve().map { zipTree(it) } })
@@ -192,7 +185,7 @@ val packageMpsPlugin by tasks.registering(Zip::class) {
     dependsOn(buildLanguages)
     archiveFileName.set(Versions.groupID + "." + Versions.artifactID + "." + Versions.buildVerison + ".zip")
 
-    from(file("build/artifacts/de.doge.mps.dot.build"))
+    from(file("build/artifacts/de.doge.dot.build"))
     destinationDirectory.set(publishDir)
 }
 
@@ -227,22 +220,4 @@ publishing {
     }
 
 }
-
-
-configure<org.modelix.gradle.mpsbuild.MPSBuildSettings> {
-    generatorHeapSize = "4G"
-    macro("iets3.github.opensource.home", "..")
-
-    mps(""+Versions.mpsFull)
-    externalModules("de.itemis.mps:extensions:" + Versions.extensions)
-
-    search("../mps/languages")
-
-    publication("dot") {
-        module("libre.doge.mps.dot")
-        module("libre.doge.mps.dot.genplan")
-        module("libre.doge.mps.dot.plaintextgen")
-    }
-}
-
 
