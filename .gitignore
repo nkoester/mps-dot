@@ -5,6 +5,7 @@ build.xml
 mps/dependencies/
 build/
 .gradle
+.mpsconfig
 
 # generated java classes and java source files
 classes_gen
