@@ -88,8 +88,8 @@ object Versions {
     public const val artifactID: String = "dot"
     public const val fullID: String =  Versions.groupID + "." + Versions.artifactID
     // java
-    public const val jbr: String = "11_0_10-b1145.96"
-    public const val jbrsdk: String = "11_0_10-b1145.96"
+    public const val jbr: String = "11_0_14_1-b1751.46"
+    public const val jbrsdk: String = "11_0_14_1-b1751.46"
     //TODO: how to use this in plugins block?
     public const val downloadJBR: String = "1.6.281.3790039"
 
