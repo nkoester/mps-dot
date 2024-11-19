@@ -17,7 +17,7 @@ buildscript {
 
 plugins {
     id("maven-publish")
-    id("download-jbr") version "1.5.269.964f94a"
+    id("download-jbr") version "1.28.0.441.896925d"
 }
 
 repositories {
@@ -90,8 +90,8 @@ object Versions {
     // java
     public const val jbr: String = "11_0_14_1-b1751.46"
     public const val jbrsdk: String = "11_0_14_1-b1751.46"
-    //TODO: how to use this in plugins block?
-    public const val downloadJBR: String = "1.6.281.3790039"
+    //WARNING: This variable is not used - https://github.com/gradle/gradle/issues/9830
+    public const val downloadJBR: String = "1.28.0.441.896925d"
 
     // mps
     public const val mpsMajor: String = "2021"
